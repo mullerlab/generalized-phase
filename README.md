@@ -27,7 +27,7 @@ The functions in this repository also use [CircStat](https://github.com/circstat
 First, download or clone the repository:
 
 ```
-git clone https://github.com/mullerlab/gp-demo
+git clone https://github.com/mullerlab/generalized-phase
 ```
 
 Then navigate to the installation. Once you have all dependencies ready on the MATLAB path (see above), you will be able to run the demonstrations in this repository.
