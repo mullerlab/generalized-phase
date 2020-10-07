@@ -34,8 +34,8 @@ Then navigate to the installation. Once you have all dependencies ready on the M
 
 ## Spontaneous Waves Demo
 
-[spontaneous_wave_demo.m](spontaneous_wave_demo.m) demonstrates the GP representation applied to Utah multielectrode array recordings in extrastriate visual cortex of the marmoset. The code loads a set of trials (spikes + LFP), calculates GP (line 45), implements the algorithm for detection of spontaneous traveling waves (lines 48-77), and calculates the GP at which spikes occur during fixation (lines 82-88). Note that in the example wave plots (line 80), no smoothing is applied to the data. To visualize the same data with randomized spatial structure, "options.shuffle_channels" can be set to "true".
+[spontaneous_wave_demo.m](spontaneous_wave_demo.m) demonstrates the GP representation applied to Utah multielectrode array recordings in extrastriate visual cortex of the marmoset. The code loads a set of trials (spikes + LFP), calculates GP (line 44), implements the algorithm for detection of spontaneous traveling waves (lines 47-68), and calculates the GP at which spikes occur during fixation (lines 73-79). Note that in the example wave plots (line 71), no smoothing is applied to the data. To visualize the same data with randomized spatial structure, "options.shuffle_channels" can be set to "true".
 
 ## Developers
 
-[Lyle Muller](http://mullerlab.ca) (Western U) and Zac Davis (Salk Institute)
+[Lyle Muller](http://mullerlab.ca) (Western University) and Zac Davis (Salk Institute)
