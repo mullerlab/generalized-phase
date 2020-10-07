@@ -10,7 +10,7 @@ addpath( genpath_exclude( '.', '.git' ) );
 clearvars; clc;
 
 % options
-options.subject = 'T'; % this can be 'W' or 'T' (two marmoset subjects)
+options.subject = 'W'; % this can be 'W' or 'T' (two marmoset subjects)
 options.plot = true; % this option turns plots ON or OFF
 options.plot_shuffled_examples = false; % example plots w/channels shuffled in space
 
