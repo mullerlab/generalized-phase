@@ -2,7 +2,7 @@
 
 This repository contains code and demonstrations implementing the "generalized phase" (GP) representation introduced in:
 
-> [Davis*, Muller*, Martinez-Trujillo, Sejnowski, Reynolds. Spontaneous travelling cortical waves gate perception in behaving primates. *bioRxiv*, 2019 (*equal contribution)](https://www.biorxiv.org/content/10.1101/811471v1)
+> [Davis*, Muller*, Martinez-Trujillo, Sejnowski, Reynolds. Spontaneous travelling cortical waves gate perception in behaving primates. *Nature*, 2020 (*equal contribution)](https://www.biorxiv.org/content/10.1101/811471v1)
 
 The GP representation is a comprehensive numerical implementation of the "analytic signal" paradigm originally introduced by Denis Gabor in 1946 ([ref](https://ieeexplore.ieee.org/document/5298517)). This paradigm established the concepts of "instantaneous frequency" and "instantaneous phase"; however, in practice, technical limitations can cause breakdowns of the representation. Specifically, low-frequency intrusions effectively shift the analytic signal representation by a constant in the complex plane, which in turn can strongly distort angles estimated by the four-quadrant arctangent function. High-frequency intrusions can introduce negative-frequency components, in which estimated phase progression reverses direction. We correct these technical limitations by (1) ensuring the representation remains centered in the complex plane and (2) detecting and correcting negative frequency components. 
 
