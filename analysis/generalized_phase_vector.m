@@ -52,7 +52,11 @@ if all( isnan(ph) ), xgp = nan( size(xo) ); return; end
 idx = ( wt < lp ); idx(1) = 0; [L,G] = bwlabel( idx );
 for kk = 1:G
     idxs = find( L == kk );
-    idx( idxs(1):( idxs(1) + ((idxs(end)-idxs(1))*nwin) ) ) = true;
+    if (idxs(1) + ((idxs(end)-idxs(1))*nwin)) > npts
+        idx( idxs(1):npts ) = true;
+    else
+        idx( idxs(1):( idxs(1) + ((idxs(end)-idxs(1))*nwin) ) ) = true;
+    end
 end
 
 % "stitch over" negative frequency epochs
