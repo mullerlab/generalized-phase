@@ -56,9 +56,13 @@ for kk = 1:G
 end
 
 % "stitch over" negative frequency epochs
-p = ph; p(idx) = NaN;
+p = ph;
+p = unwrap(p);
+p(idx) = NaN;
 if all( isnan(p) ), xgp = nan( size(xo) ); return; end % check if all NaNs
-p = unwrap(p); p(isnan(p)) = naninterp( p ); p = rewrap( p ); ph = p;
+p(isnan(p)) = naninterp( p );
+p = rewrap( p );
+ph = p;
 
 % output
 xgp = md .* exp( 1i .* ph );
