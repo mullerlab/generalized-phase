@@ -64,9 +64,12 @@ for ii = 1:rows
 		end
 
 		% "stitch over" negative frequency epochs
-		p = squeeze( ph(ii,jj,:) ); p(idx) = NaN; 
+		p = squeeze( ph(ii,jj,:) );
+		p = unwrap(p);
+		p(idx) = NaN; 
 		if all( isnan(p) ), continue; end % check if all NaNs
-		p = unwrap(p); p(isnan(p)) = naninterp( p ); p = rewrap( p );
+		p(isnan(p)) = naninterp( p );
+		p = rewrap( p );
 		ph(ii,jj,:) = p(1:size(ph,3));
 
 	end
